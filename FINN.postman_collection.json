@@ -1,0 +1,72 @@
+{
+	"variables": [],
+	"info": {
+		"name": "FINN",
+		"_postman_id": "7d2d2d9c-06b7-80d4-702e-10cc6fa59623",
+		"description": "URL shortening service using Node and any framework.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:6000/endode",
+			"request": {
+				"url": "http://localhost:1000/encode",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\": \"https://codesubmit.io/library/react\"\n}"
+				},
+				"description": "/encode - Encodes a URL to a shortened URL"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1000",
+			"request": {
+				"url": "http://localhost:1000/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Home Url"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1000/decode",
+			"request": {
+				"url": {
+					"raw": "http://localhost:1000/decode?shortUrl=http://short.est/sfJVcv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"decode"
+					],
+					"query": [
+						{
+							"key": "shortUrl",
+							"value": "http://short.est/sfJVcv",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Home Url"
+			},
+			"response": []
+		}
+	]
+}
